@@ -1,0 +1,97 @@
+
+
+ Course Agenda
+Stock Synthesis course - UMass Dartmouth
+4 - 8 April 2016
+9am - 5pm, with lunch break
+
+
+Monday AM
+
+    ·         Opening Words   
+
+    ·         Set up computers   
+    ·         Distribute materials, introduce website
+
+    ·         Intro presentation on SS
+
+    ·         Getting started with SS
+
+
+Monday PM
+
+·         Walk-through of input files (Excel helper files for SS)
+
+·        Demonstrate running SS from command line
+
+·         Demonstrate viewing output in Excel
+
+·         Demonstrate viewing output in r4ss
+
+·         Example stock - SCAA example
+
+Tuesday AM
+
+·         SELECTIVITY presentation and demos; see special topic:  selectivity for sheets, examples and ppt
+
+·         Spawner-recruitment
+
+Tuesday PM
+
+·         r4ss presentation and demo
+
+             Recruitment bias adjustment
+
+·         Survey of a recruitment deviation
+
+·         Example stock - Herring
+
+Wednesday AM
+
+·           Length composition
+
+    Growth (VBK, Richard, age-specific K)
+
+·         Maturity. fecundity, herrmaphrodites
+
+Wednesday PM
+
+·         Data-limited:  age-structured production model
+
+·         Data-limited:  depletion based
+
+·         Data-limited:  catch curve based
+
+·         Example stock - surfclam
+
+Thursday AM
+
+·         Example stock - seatrout
+
+·         Area-specific configurations
+
+Thursday PM
+
+       ·         DISCARD Fleet presentation and demos
+
+·         Forecast with SS
+
+·         SS 3.30 preview
+
+·         Catch multiplier in 3.30
+
+       X
+
+       X
+
+Friday AM
+
+       X
+
+       X
+
+       X
+
+
+
+

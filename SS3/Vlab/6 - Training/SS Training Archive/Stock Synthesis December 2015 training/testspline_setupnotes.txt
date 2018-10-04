@@ -1,0 +1,40 @@
+Cubic_Spline write-up
+
+P1:  Code for setup, 0 means do nothing, 1 means create knots from cumulative distribution of data, 2 creates knots and all bounds, priors, etc.
+P2:  slope at the first knot, should be positive, default range is -0.001 to 1.0
+P3:  slope at the last knot, should be negative, default range is +0.001 to -1.0
+
+P4 to P(3+n):  values of knots
+P(3+n+1) to P(3+2*n):   values of log selex at knots
+
+In automatic knot placement:
+knot 1 is at middle of first size bin
+knot 2 is at 5% of cum distribution of data
+knot n-1 is at 95% of cum distribution of data
+knot n is at middle of last size bin
+knots 3 to n-2 are evenly spaced along the cumulative distribution of size comp
+
+In automatic complete setup, the values at the knots also get created.
+starts with value of -5 at first knot
+increases linearly to a value of -1 at an intermediate knot, sets that knot to have fixed selex value (not estimated)
+sets values for higher knots to value of 0.0
+
+Variables get explicit labels, so control.ss_new looks like:
+LO HI INIT PRIOR PR_type SD PHASE env-var use_dev dev_minyr dev_maxyr dev_stddev Block Block_Fxn
+ 0 2 2 0 -1 0 -999 0 0 0 0 0 0 0 # SizeSpline_Code_FISHERY1_1
+ -0.001 1 0.01 0 1 0.001 3 0 0 0 0 0 0 0 # SizeSpline_GradLo_FISHERY1_1
+ -1 0.001 -0.01 0 1 0.001 3 0 0 0 0 0 0 0 # SizeSpline_GradHi_FISHERY1_1
+ 11 95 11 0 -1 0 -999 0 0 0 0 0 0 0 # SizeSpline_Knot_1_FISHERY1_1
+ 11 95 40.6507 0 -1 0 -999 0 0 0 0 0 0 0 # SizeSpline_Knot_2_FISHERY1_1
+ 11 95 52.5145 0 -1 0 -999 0 0 0 0 0 0 0 # SizeSpline_Knot_3_FISHERY1_1
+ 11 95 59.1561 0 -1 0 -999 0 0 0 0 0 0 0 # SizeSpline_Knot_4_FISHERY1_1
+ 11 95 63.5744 0 -1 0 -999 0 0 0 0 0 0 0 # SizeSpline_Knot_5_FISHERY1_1
+ 11 95 72.3855 0 -1 0 -999 0 0 0 0 0 0 0 # SizeSpline_Knot_6_FISHERY1_1
+ 11 95 95 0 -1 0 -999 0 0 0 0 0 0 0 # SizeSpline_Knot_7_FISHERY1_1
+ -9 7 -5 0 1 0.001 2 0 0 0 0 0 0 0 # SizeSpline_Val_1_FISHERY1_1
+ -9 7 -3 0 1 0.001 2 0 0 0 0 0 0 0 # SizeSpline_Val_2_FISHERY1_1
+ -9 7 -1 0 -1 0 -999 0 0 0 0 0 0 0 # SizeSpline_Val_3_FISHERY1_1
+ -9 7 0 0 1 0.001 2 0 0 0 0 0 0 0 # SizeSpline_Val_4_FISHERY1_1
+ -9 7 0 0 1 0.001 2 0 0 0 0 0 0 0 # SizeSpline_Val_5_FISHERY1_1
+ -9 7 0 0 1 0.001 2 0 0 0 0 0 0 0 # SizeSpline_Val_6_FISHERY1_1
+ -9 7 0 0 1 0.001 2 0 0 0 0 0 0 0 # SizeSpline_Val_7_FISHERY1_1

@@ -1,0 +1,25 @@
+#V3.30.11.00-safe;_2018_04_11;_Stock_Synthesis_by_Richard_Methot_(NOAA)_using_ADMB_11.6
+#This is a work of the U.S. Government and is not subject to copyright protection in the United States.
+#Foreign copyrights may apply. See copyright.txt for more information.
+Thu Oct  4 13:57:17 2018
+
+ reset upper end of F_reporting_ages to be nages-2  
+AGE: data_month already set for y,s,f: 2001 1 2 to real month: 8  but read value is: 1
+AGE: data_month already set for y,s,f: 2002 1 2 to real month: 8  but read value is: 1
+AGE: data_month already set for y,s,f: 2003 1 2 to real month: 8  but read value is: 1
+AGE: data_month already set for y,s,f: 2005 1 2 to real month: 8  but read value is: 1
+AGE: data_month already set for y,s,f: 2006 1 2 to real month: 8  but read value is: 1
+AGE: data_month already set for y,s,f: 2007 1 2 to real month: 8  but read value is: 1
+AGE: data_month already set for y,s,f: 2008 1 2 to real month: 8  but read value is: 1
+AGE: data_month already set for y,s,f: 2009 1 2 to real month: 8  but read value is: 1
+AGE: data_month already set for y,s,f: 2012 1 2 to real month: 8  but read value is: 1
+AGE: data_month already set for y,s,f: 2013 1 2 to real month: 8  but read value is: 1
+AGE: data_month already set for y,s,f: 2015 1 2 to real month: 8  but read value is: 1
+AGE: data_month already set for y,s,f: 2016 1 2 to real month: 8  but read value is: 1
+benchmark year less than styr; reset to equal styr
+benchmark year less than styr; reset to equal styr
+ warning: poor convergence in Fmsy, final dy/dy2= -0.00108758
+ Fmsy is >3x of Fspr are you sure?  check for convergence 
+ Fmsy is close to max allowed; check for convergence 
+ N warnings: 18
+Number_of_active_parameters_on_or_near_bounds: 2

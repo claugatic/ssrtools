@@ -1,0 +1,41 @@
+The executables are:
+
+ - ss_trans.exe translates input files from the SS 3.24 format to the SS 3.30 format
+ - ss.exe is the SS 3.30 executable
+ - ss_opt.exe is the optimized (faster, but less error checking) version of the SS 3.30 executable
+ 
+The required input files are:
+ - starter.ss  (which contains the filenames for the data and control files)
+ - <data file>  with name matching that in starter.ss
+ - <control file>  with name matching that in starter.ss
+ - forecast.ss
+ - wtatage.ss  (conditional on control file switch specifying use of empirical body weight-at-age)
+
+For existing models with input files in SS 3.24 format, 
+use ss_trans.exe to translate input files from SS 3.24 format to SS 3.30 format.
+
+If you are using the GUI, it will detect if input files are 3.24 and guide you through the conversion.
+You also can manually go through the conversion steps below.
+
+The translated input files are the *.ss_new files produced by ss_trans.exe:
+
+ - make a new directory for the SS 3.30 run
+ - copy data.ss_new to the new directory and rename it to the original input data file name
+ - copy control.ss_new to the new directory and rename it to the original input control file name
+ - copy forecast.ss_new to the new directory and rename it to forecast.ss
+ - copy starter.ss_new to the new directory and rename it to starter.ss
+ - if applicable, copy wtatage.ss_new to the new directory and rename it to wtatage.ss
+
+After the new input files have been edited to address any warnings or other issues, 
+then ss.exe or ss_opt.exe can be used.
+
+ss_trans.exe cannot completely convert all aspects of time-varying parameter specifications, 
+so examine the control.ss_new file before using it as the basis for your updated assessment.
+
+Running SS:
+1.  open a command shell window in the folder containing your input files and ss.exe (or have ss.exe in your path, or named in a .bat file)
+2.  type "ss" followed by any ADMB commands, such as -nohess
+3.  ss will start by reading starter.ss, then the data file, then forecast.ss, then control file, then (optionally) wtatage.ss
+4.  as ss reads those files, information is output to echoinput.ss and warnings.ss
+5.  if something goes wrong with the read or first iteration of ss, looking at echoinput and warnings is your first recourse.
+6.  ss will display some info to the screen as it runs, then output goes to a set of files with *.sso names.

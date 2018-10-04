@@ -1,0 +1,53 @@
+#V3.24U
+SS-V3.24U-safe;_08/29/2014;_Stock_Synthesis_by_Richard_Methot_(NOAA)_using_ADMB_11.2MacOS
+StartTime: Mon Sep  3 06:20:29 2018
+
+Data_File: ALT.dat
+Control_File: ALT.ctl
+to_come_# Best_F
+to_come_#  F_units
+2016 F_year
+to_come_# F_basis
+to_come_# F_limit
+to_come_#  F_limit_basis
+to_come_# F_msy
+to_come_# F_msy_basis
+to_come_# F_target
+to_come_# F_target_basis
+to_come_# F/F_limit
+to_come_# F/F_msy
+to_come_# F/F_target
+to_come_# Best_Bio
+to_come_# Bio_units
+2016 Bio_year
+to_come_# Bio_basis
+to_come_# Bio_limit
+to_come_# Bio_limit_basis
+to_come_# Bio_MSY
+to_come_# Bio_MSY_basis
+to_come_# Bio_MSY
+to_come_# Bio_above_below
+to_come_# Bio/Bio_limit
+to_come_# Bio/Bio_MSY
+
+Category Year Abundance Abundance Recruitment Spawners Catch Catch Catch Catch Catch Catch Fmort Fmort Fmort Fmort Fmort
+Primary _ N Y Y Y N Y N N N N N N N Y Y
+Type _ Biomass Biomass Age Female_Mature Sel_Bio Kill_Bio Retain_Bio Sel_Numbers Kill_Numbers Retain_Numbers Exploitation SPR_std F_std Sum_Fleet_Apical_Fs F=Z-M
+Source _ Model Model Model Model Model Model Model Model Model Model Model Model Model Model Model
+Basis _ Biomass Biomass Numbers Eggs Biomass Biomass Biomass Numbers Numbers Numbers Dead_Catch_Bio/Summary_Bio  1-SPR (F)/(Fmsy);_with_F=Z-M;_for_ages_0_8  Sum_Fleet_Apical_Fs F=Z-M
+Range _ All Age_1+ Age_0 Mature Exploitable_all Exploitable_dead Exploitable_retained  Exploitable_all Exploitable_dead Exploitable_retained  Exploitable_dead Exploitable_all Exploitable_all Exploitable_all 0_8
+Statistic _ Mean Mean Mean Mean Mean Mean Mean Mean Mean Mean Mean Mean Mean Mean Mean
+Scalar _ 1 1 1000 1 1 1 1 1000 1000 1000 1 1 1 1 1
+_ 2005 1.74281e+06 1.55321e+06 7.79594e+06 1.07337e+06  98421.5 98421.5 98421.5 1.43115e+06 1.43115e+06 1.43115e+06 0.0633665 0.295728 inf  0.558571 0.0388277
+_ 2006 1.85651e+06 1.79804e+06 6.94143e+06 1.22087e+06  101847 101847 101847 1.41629e+06 1.41629e+06 1.41629e+06 0.0566436 0.209783 inf  0.243532 0.0576916
+_ 2007 1.54443e+06 1.49237e+06 3.43845e+06 1.03811e+06  137375 137375 137375 1.87557e+06 1.87557e+06 1.87557e+06 0.0920516 0.304593 inf  0.324395 0.105077
+_ 2008 1.14005e+06 1.11426e+06 6.67054e+06 776752  111248 111248 111248 1.26283e+06 1.26283e+06 1.26283e+06 0.0998397 0.319712 inf  0.319235 0.113721
+_ 2009 817920 767891 7.62646e+06 540470  91402.2 91402.2 91402.2 1.08798e+06 1.08798e+06 1.08798e+06 0.11903 0.320277 inf  0.342839 0.108519
+_ 2010 664492 607294 601265 399390  92627.6 92627.6 92627.6 943424 943424 943424 0.152525 0.296749 inf  0.375114 0.0880299
+_ 2011 555885 551376 140769 336083  93617.4 93617.4 93617.4 857067 857067 857067 0.169789 0.337416 inf  0.463224 0.149502
+_ 2012 357705 356650 185878 201812  108410 108410 108410 735989 735989 735989 0.303967 0.448893 inf  1.03568 0.254598
+_ 2013 183322 181928 971184 104351  64672.6 64672.6 64672.6 391026 391026 391026 0.355485 0.446884 inf  0.84375 0.29118
+_ 2014 96547.7 89263.8 663664 60262  19969.3 19969.3 19969.3 125353 125353 125353 0.223711 0.289313 inf  0.393096 0.0927372
+_ 2015 75517.7 70540.2 1.50083e+06 51186.6  258.98 258.98 258.98 3758.47 3758.47 3758.47 0.00367138 0.0103828 inf  0.00740372 0.00375374
+_ 2016 78239.7 66983.5 1.03384e+06 52354.3  284.77 284.77 284.77 4453.43 4453.43 4453.43 0.00425135 0.0104938 inf  0.00816993 0.00287346
+_ 2017 94339.3 86585.5 1.14147e+06 61684.2  0 0 0 0 0 0 0 0.00903639 inf  0 0

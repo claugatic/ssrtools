@@ -1,0 +1,7 @@
+SS-V3.24U-safe;_08/29/2014;_Stock_Synthesis_by_Richard_Methot_(NOAA)_using_ADMB_11.2MacOS
+Mon Sep  3 06:20:29 2018
+
+ Use of size selectivity not advised when reading empirical wt-at-age 
+ warning: poor convergence in Btarget search 43165.4 1.15374e-13
+ N warnings: 2
+Number_of_active_parameters_on_or_near_bounds: 0

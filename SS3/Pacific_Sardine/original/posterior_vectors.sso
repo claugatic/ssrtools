@@ -1,0 +1,12 @@
+1 0 333.256 F/Fmsy_stdev 0 0 0 0 0 0 0 0 0 0 0 0 0 
+1 0 333.256 B/Bmsy_stdev 0 0 0 0 0 0 0 0 0 0 0 0 0 
+depletion_basis_is_not_=2;_so_info_below_is_not_B/Bmsy
+Endyr+1= 2017
+run mceval objfun Numbers Area Sex Ages: 0 1 2 3 4 5 6 7 8 9 10
+run mceval objfun F_yr 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 
+run mceval objfun B_yr 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 
+1 0 333.256 N_at_Age  1 1  1.03384e+06 821675 198356 156399 13908.4 4529.07 10265 52864.3 13045.2 1878.23 4325.83
+1 0 333.256 F/Fmsy  inf inf inf inf inf inf inf inf inf inf inf inf inf
+1 0 333.256 B/Bmsy  9.94657 11.3134 9.61987 7.19791 5.00836 3.70102 3.11438 1.87013 0.966988 0.558429 0.47433 0.485151 0.571608
+1 0 333.256 F/Fmsy_stdev nan nan nan nan nan nan nan nan nan nan nan nan nan 
+1 0 333.256 B/Bmsy_stdev nan nan nan nan nan nan nan nan nan nan nan nan nan 

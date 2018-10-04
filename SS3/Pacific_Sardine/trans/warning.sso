@@ -1,0 +1,12 @@
+#V3.30.11.00-trans;_2018_04_11;_Stock_Synthesis_by_Richard_Methot_(NOAA)_using_ADMB_11.6
+#This is a work of the U.S. Government and is not subject to copyright protection in the United States.
+#Foreign copyrights may apply. See copyright.txt for more information.
+Thu Aug 30 12:27:54 2018
+
+age at settlement calculated to be: 1  for settle_time 1.  Will be reset to 0 to match 3.24 protocol
+The R1_offset parameter is now the regime parameter and it must not be estimated and should have value of 0.0
+Instead, time-varying offsets to the regime parameter can be estimated; and a block for doing this has been created
+you will need to manually create the parameter line for that block or turn autogen value to 0 for SR_parms
+ Use of size selectivity not advised when reading empirical wt-at-age 
+ Main recdev biasadj is >2 times ratio of rmse to sigmaR
+ Early recdev biasadj is >2 times ratio of rmse to sigmaR

@@ -1,0 +1,12 @@
+#V3.30.11.00-safe;_2018_04_11;_Stock_Synthesis_by_Richard_Methot_(NOAA)_using_ADMB_11.6
+#This is a work of the U.S. Government and is not subject to copyright protection in the United States.
+#Foreign copyrights may apply. See copyright.txt for more information.
+Thu Sep  6 08:14:55 2018
+
+fleet: 1 surveytime read for fishing fleet as: 0.5 normally is -1 for fishing fleet; can override by month>1000
+ Maximum size at age: 19.5876; is within 5% of the largest size bin: 19; Add more bins
+ warning: poor convergence in Fspr search 0.6 0.608025
+ warning: high Fmult for Fspr: 40 needed to come close to low SPR 0.6 0.608025
+ warning: poor convergence in Btarget search 11349.4 12546.7
+ N warnings: 4
+Number_of_active_parameters_on_or_near_bounds: 0
