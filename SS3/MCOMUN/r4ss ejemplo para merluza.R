@@ -9,17 +9,14 @@ rm(list=ls())
 WD<- getwd() 
 setwd(WD)     
 
-#pwd <- "C:/Dropbox/sardina_ss/Sardina"
+pwd <- "c:/CEGM/ACTIVIDADES 2018/MSE/SS3/MCOMUN/"
 #pwd= "c:/CEGM/ACTIVIDADES 2018/MSE/SS3/Sardina"
-
 repfile <- SS_output(dir=WD)
 SS_plots(repfile)
-
 #--------------
 # Para comparar
 #--------------
-
-otracarpeta <- file.path(pwd,"Selectivity17")
+otracarpeta <- file.path(pwd,"toshare")
 dirvec <- c(pwd, otracarpeta)
 
 # Para leer mas que un archivo de Report

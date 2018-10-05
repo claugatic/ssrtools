@@ -1,0 +1,730 @@
+#V3.30.11.00-safe;_2018_04_11;_Stock_Synthesis_by_Richard_Methot_(NOAA)_using_ADMB_11.6
+#This is a work of the U.S. Government and is not subject to copyright protection in the United States.
+#Foreign copyrights may apply. See copyright.txt for more information.
+Fri Oct  5 16:05:36 2018
+
+mcomun.dat  datfilename
+control.dat  ctlfilename
+0  readparfile
+1  rundetail
+1  reportdetail
+0  docheckup
+0  Do_ParmTrace
+2  Do_CumReport
+1  Do_all_priors
+1  SoftBound
+1  N_nudata
+10  Turn_off_phase
+0  MCeval burn_intvl
+1  MCeval thin_intvl
+0  jitter fraction for initial parm values
+-1  STD_Yr_min
+-2  STD_Yr_max
+0  N extra STD years to read
+0.0001  final_conv
+-3  retro_yr
+0  Smry_Age
+1  depletion_basis
+0.4  depletion_level
+1  SPR_reporting
+4  F_reporting
+ 3 8  F_reporting_ages_R
+Will be checked against maxage later 
+2  F_std_basis
+For Kobe plot, set depletion_basis=2; depletion_level=1.0; F_reporting=your choose; F_std_basis=2
+0.08
+Read files in 3.30 format
+Now read MCMC output detail.MCMC_bump;  separate values will be parsed from input
+MCMC output detail:  0
+Now read ALK tolerance (suggest 0.0001)
+ALK tolerance:  0
+  finish reading starter.ss
+
+1992 start year 
+2017 end year 
+1 N seasons 
+ 12 months/seas (fractions OK) 
+2 Number of subseasons (even number only; min 2) for calculation of ALK 
+ 1 processed season duration (frac. of year) 
+ 0.5 processed subseason duration (frac. of year) 
+ processed subseason cumulative annual time within season 
+ 0 0.5
+SPAWN month: 1; seas: 1; subseas_for_ALK: 1; timing_in_season: 0
+1 N sexes 
+Accumulator age 12
+1 N_areas 
+2 total number of fishing fleets and surveys 
+rows are fleets; columns are: Fleet_#, fleet_type, timing, area, units, need_catch_mult
+1 #  1 -1 1 1 0.1 # FISHERY1
+2 #  3 0.5 1 1 0.2 # SURVEY1
+YPR_optimize_mask:  1 0
+27 records
+first catch record:  -999 1 1 0 0.05
+last catch record:  2017 1 1 14336 0.05
+ equ, seas:   -1 1 catches:  0 0
+year, seas: 1992 1 catches:  75313 0
+year, seas: 1993 1 catches:  77114 0
+year, seas: 1994 1 catches:  81728 0
+year, seas: 1995 1 catches:  90484 0
+year, seas: 1996 1 catches:  101876 0
+year, seas: 1997 1 catches:  87620 0
+year, seas: 1998 1 catches:  80144 0
+year, seas: 1999 1 catches:  103789 0
+year, seas: 2000 1 catches:  110143 0
+year, seas: 2001 1 catches:  121200 0
+year, seas: 2002 1 catches:  116040 0
+year, seas: 2003 1 catches:  115343 0
+year, seas: 2004 1 catches:  73598 0
+year, seas: 2005 1 catches:  47166 0
+year, seas: 2006 1 catches:  47958 0
+year, seas: 2007 1 catches:  45848 0
+year, seas: 2008 1 catches:  47936 0
+year, seas: 2009 1 catches:  47144 0
+year, seas: 2010 1 catches:  49197 0
+year, seas: 2011 1 catches:  44555 0
+year, seas: 2012 1 catches:  39629 0
+year, seas: 2013 1 catches:  39629 0
+year, seas: 2014 1 catches:  18573 0
+year, seas: 2015 1 catches:  19410 0
+year, seas: 2016 1 catches:  20909 0
+year, seas: 2017 1 catches:  14336 0
+
+#_show_total_catch_by_fleet
+1 type: 1 FISHERY1 catch: 1.71668e+06
+2 type: 3 SURVEY1 catch: 0
+
+#_  now read survey characteristics:  fleet_#, svyunits, svyerrtype for each fleet 
+Units:  0=numbers; 1=biomass; 2=F; >=30 for special patterns
+Errtype:  -1=normal; 0=lognormal; >0=T
+SD_Report: 0=no sdreport; 1=enable sdreport
+Fleet Units Err_Type SD_Report
+ 1 1 0 0
+ 2 1 0 0
+42 nobs_survey 
+ -999 0 0 0 0
+ 1997 1 1 3.12 0.2
+ 1998 1 1 3.23 0.2
+ 1999 1 1 3.04 0.2
+ 2000 1 1 3.07 0.2
+ 2001 1 1 3.07 0.2
+ 2002 1 1 3.03 0.2
+ 2003 1 1 3.16 0.2
+ 2004 1 1 3.26 0.2
+ 2005 1 1 3.24 0.2
+ 2006 1 1 3.33 0.2
+ 2007 1 1 3.24 0.2
+ 2008 1 1 3.22 0.2
+ 2009 1 1 3.18 0.2
+ 2010 1 1 3.22 0.2
+ 2011 1 1 3.27 0.2
+ 2012 1 1 3.34 0.2
+ 2013 1 1 3.28 0.2
+ 2014 1 1 3.22 0.2
+ 2015 1 1 3.13 0.2
+ 2016 1 1 3.17 0.2
+ 2017 1 1 3.27 0.2
+ 1993 8 2 198540 0.35
+ 1995 8 2 505765 0.35
+ 1997 8 2 712878 0.35
+ 1999 8 2 899207 0.35
+ 2000 8 2 891598 0.35
+ 2001 8 2 917122 0.35
+ 2004 8 2 272084 0.35
+ 2005 8 2 223721 0.35
+ 2006 8 2 266596 0.35
+ 2007 8 2 278700 0.35
+ 2008 8 2 313778 0.35
+ 2009 8 2 322729 0.35
+ 2010 8 2 284575 0.35
+ 2011 8 2 290331 0.2
+ 2012 8 2 273954 0.2
+ 2013 8 2 224977 0.2
+ 2014 8 2 204997 0.2
+ 2015 8 2 211884 0.2
+ 2016 8 2 242920 0.2
+ 2017 8 2 301330 0.2
+ processed survey data 
+1 FISHERY1  3.12 3.23 3.04 3.07 3.07 3.03 3.16 3.26 3.24 3.33 3.24 3.22 3.18 3.22 3.27 3.34 3.28 3.22 3.13 3.17 3.27
+2 SURVEY1  198540 505765 712878 899207 891598 917122 272084 223721 266596 278700 313778 322729 284575 290331 273954 224977 204997 211884 242920 301330
+Successful read of index data; N= 41
+Number of survey superperiods by fleet:  0 0
+Number of sdreport index values: 0
+ note order of discard read is now: N fleets with disc, then if Ndisc_fleets>0 read:  fleet, disc_units, disc_error(for 1,Ndisc_fleets), then read obs 
+0 N fleets with discard 
+Successful read of discard data, N by fleet =  0 0
+N superperiods by fleet =  0 0
+0 Use mean body size (weight or length); If 0, then no additional input in 3.30 
+Successful pre-processing of mean-bodysize data
+2 LenBin_option:  1=set to data bins; 2 generate uniform; 3 = read custom
+ 2 5 50 input for setup of pop length bins 
+
+Processed Population length bin info 
+ 5 7 9 11 13 15 17 19 21 23 25 27 29 31 33 35 37 39 41 43 45 47 49
+Overall_Compositions
+Fleet len_bins  0 0
+Successful processing of length data
+
+Enter the number of agebins, or 0 if no age data
+11 N age bins 
+ 2 3 4 5 6 7 8 9 10 11 12 agebins 
+1 N age error defs 
+ageerror_definitions_as_read
+ -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+ 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001
+AgeKey: 0 will create key from parameters
+#_now read for each fleet info for processing the age comps:
+#_mintailcomp: upper and lower distribution for females and males separately are accumulated until exceeding this level.
+#_addtocomp:  after accumulation of tails; this value added to all bins
+#_males and females treated as combined gender below this bin number 
+#_compressbins: accumulate upper tail by this number of bins; acts simultaneous with mintailcomp; set=0 for no forced accumulation
+#_Comp_Error:  0=multinomial, 1=dirichlet
+#_Comp_ERR-2:  index of parameter to use
+#_minsamplesize: minimum sample size; set to 1 to match 3.24, set to 0 for no minimum
+0 1e-07 1 0 0 0 20  #_fleet: 1 FISHERY1
+0 1e-07 1 0 0 0 30  #_fleet: 2 SURVEY1
+1 Lbin method for defined size ranges 
+43 N age comp observations 
+ first agecomp obs 
+ 1992 1 1 3 0 1 1 -1 25 1203 6480 15347 17786 17334 13909 12013 8604 4741 3502 3928
+ last obs
+ 2015 8 2 3 0 1 1 -1 42 183000 356000 147000 22000 10000 2000 2000 1000 1000 0 0
+
+Age_Data Nobs by fleet  25 18
+Age_Data superperiods by fleet  0 0
+process age comps 
+Fleet age_bins  2 3 4 5 6 7 8 9 10 11 12
+1 freq  0.0524599 0.187688 0.269797 0.17752 0.115455 0.0878957 0.0536677 0.0280539 0.013836 0.00724239 0.00638487
+1 cuml  0.0524599 0.240147 0.509945 0.687464 0.802919 0.890815 0.944483 0.972537 0.986373 0.993615 1
+2 freq  0.385518 0.269055 0.151378 0.0572154 0.0379525 0.0264822 0.020204 0.0127626 0.00881584 0.0153828 0.0152336
+2 cuml  0.385518 0.654573 0.805951 0.863166 0.901119 0.927601 0.947805 0.960568 0.969384 0.984766 1
+
+Successful processing of age data 
+0 (0/1) use mean size-at-age data 
+Successful read of size-at-age data; N kept =  0 0
+0 N_envvar 
+0 N sizefreq methods to read 
+ finished processing sizefreq data 
+0 Do_TagData(0/1) 
+0 Do_Morphcomp(0/1) 
+Do dataread for selectivity priors(0/1):  0
+Yr  Seas Fleet  Age/Size  Bin  selex_prior  prior_sd
+feature not yet implemented
+ data read successful
+
+read Do_Benchmark(0/1), then MSY basis(1=F_SPR,2=F_Btarget,3=calcMSY,4=mult*F_endyr)
+1 echoed Do_Benchmark 
+2 echoed MSY basis
+next read SPR target and Biomass target as fractions
+0.4 echoed SPR_target 
+0.342 echoed B_target 
+next read 10 Benchmark years for:  beg-end bio; beg-end selex; beg-end relF; beg-end recr_dist; beg-end SRparm
+codes: -999 means start year; >0 is an actual year; <=0 is relative to endyr
+ 2001 2001 2001 2001 2001 2001 1992 2001 1992 2001 echoed Benchmark years
+ 2001 2001 2001 2001 2001 2001 1992 2001 1992 2001 Benchmark years as processed
+next read:  1=use range of years for relF; 2 = set same as forecast relF below
+1  echoed Bmark_RelF_Basis
+
+next read forecast basis: 0=none; 1=F(SPR); 2=F(MSY) 3=F(Btgt); 4=Ave F (enter yrs); 5=read Fmult
+1 echoed Forecast basis
+
+#next read N forecast years
+10 #echoed N_Fcast_Yrs 
+
+# next read Fmult value to be used only if Forecast basis==5
+0.2 # echoed Fmult value
+
+# next enter Fcast_years:  beg_selex, end_selex, beg_relF, end_relF, beg_recruits, end_recruits
+# enter actual year, or values of 0 or -integer to be relative to endyr)
+ 0 0 -10 0 -999 0 # echoed Fcast years as read
+ 2017 2017 2007 2017 1992 2017  # After Transformation
+
+# next read flag for specifying selectivity used in forecasts; 0 is value that mimics 3.24, 1 is experimental
+0 # echoed Fcast_Specify_Selex value
+
+next read 4 values for:  control rule shape(1 or 2), inflection (like 0.40), cutoff(like 0.10), scale(like 0.75)
+1  # echoed HarvestPolicy 
+0.4   # echoed harvest policy inflection 
+0.1   # echoed harvest policy cutoff 
+0.75   # echoed harvest policy scalar 
+
+# next enter 2 values that control looping through the forecast (see manual), then 3 placeholder values
+# first does F_msy or proxy; 2nd applies control rule; 3rd applies caps and allocations
+3 #echoed N forecast loops (1-3) (recommend 3)
+3 #echoed First forecast loop with stochastic recruitment (recommend 3)
+1 #echoed Forecast recruitment:  0=spawn_recr; 1=value*spawn_recr; 2=value*VirginRecr; 3=recent mean
+1 #echoed Forecast loop control #4:  multiplier on spawn_recr
+0 #echoed Forecast loop control #5 (reserved for future use) 
+
+#next enter year in which Fcast loop 3 caps and allocations begin to be applied
+2010 # echoed value
+
+#next enter 0, or stddev of implementation error
+0 # echoed value
+
+#next select rebuilding program output (0/1)
+0 # echoed value
+
+#next select rebuilding program:  year declared overfished
+1997 # echoed value
+
+#next select rebuilding program:  year rebuilding plan started
+2015 # echoed value
+
+#next select fleet relative F:  1=use first-last alloc year read above; 2=read list of seas, fleet, relF below
+# Note that fleet allocation is used directly as average F if Do_Forecast=4 
+1 # echoed value
+
+#next read Catch Basis for caps and allocations;  Same for all fleets
+2=dead catch bio, 3=retained catch bio, 5= dead catch numbers 6=retained catch numbers
+2 # echoed value
+
+# next read list of fleet ID and max annual catch;  end with fleet=-9999
+ -9999 -1
+ Processed Max totalcatch by fleet 
+ -1 -1
+
+Read list of area ID and max annual catch;  end with area=-9999
+ -9999 -1
+ processed Max totalcatch by area 
+ -1
+
+Read list of fleet ID and assignment to allocation group;  end with fleet ID=-9999
+fishing fleets not assigned to allocation group are processed normally
+ -9999 -1
+ Processed Fleet allocation group assignments 
+ 0 0
+2 # basis for input Fcast catch:  -1= read with each obs; 2=dead catch; 3=retained catch; 99=input Hrate(F); -1=read fleet/time specific (bio/num units are from fleetunits; note new codes in SSV3.20)
+# yr seas fleet catch
+ -9999 1 1 0
+ done reading forecast 
+
+Finished creating STD containers and indexes 
+
+ Begin reading control file 
+1 N growth patterns 
+1  N platoons (1, 3 or 5)
+  do not read sd_ratio or platoon_distr
+2  # Recruitment distribution method; where: 2=parms for main effects for GP, Area, Settle timing; 3=one parm for each Settle event
+1  # future option for recr_dist_area: 1 is hardwired to do global SRR; 2 in future will do area-specific SRR
+1 Number of settlement events: GP/area/month to read (>=0) 
+0  # unused option 
+ settlement pattern as read 
+GPat  Month  Area Age
+* 1 1 1 0*
+Now calculate the number of unique settle timings, which will dictate the number of recr_dist_timing parameters 
+N settle timings: 1
+ unique_settle_times:  1
+settle events use these settle_times:  1
+ Need to read N_GP * Narea * N_settletimings=1  recruitment distribution parameters 
+Calculated assignments in which settlement occurs 
+Settle_event / Month / Seas / Seas_from_spawn / time_from_seas_start / age_at_settle
+1 / 1  /  1 / 0 / 0  / 0
+
+MORPH_INDEXING
+g Sex GP Settlement Season Platoon Platoon% Sex*GP Sex*GP*settle_time Used(0/1) SettleTime_frac_yr
+1   1  1       1       1       1       100       1        1               1       0
+calen_age is elapsed years since beginning of year in which spawning occurred
+real_age is elapsed years since settlement
+ g  s  subseas  ALK_idx settle_time  age calen_age  real_age
+ only 1 area, so no read of do_migration or migr_firstage 
+0 N_Block_Designs
+1  timevarying parameter constraint method
+ 0 0 0 0 0  timevarying parameter autogenerate (0) or read (1) for each parm type
+0 natM_type
+1 growth model 
+ 2 999 0.055 0 growth specifications
+g a seas subseas ALK_idx real_age calen_age lin_grow first_grow_age
+1 0 1 1 1 0 0 0 0
+1 0 1 2 2 0.5 0.5 0.25 0
+1 1 1 1 1 1 1 0.5 0
+1 1 1 2 2 1.5 1.5 0.75 0
+1 2 1 1 1 2 2 1 0
+1 2 1 2 2 2.5 2.5 -1 1
+1 3 1 1 1 3 3 -2 1
+1 3 1 2 2 3.5 3.5 -2 1
+0  SD_add_to_LAA
+0  CV_depvar
+2  Maturity_Option
+2  First_Mature_Age
+2  Fecundity option
+0  Hermaphro_Option 
+1  MGparm_def
+ Biology base parameter setup
+1  0.1 0.35 0.1 0.3 0.2 3 2 0 0 0 0 0 0 0 NatM_p_1_Fem_GP_1
+2  20 25 30 30 5 0 -2 0 0 0 0 0 0 0 L_at_Amin_Fem_GP_1
+3  30 35 37 37 5 0 -4 0 0 0 0 0 0 0 L_at_Amax_Fem_GP_1
+4  0.2 0.3 0.28 0.25 0.8 0 -4 0 0 0 0 0 0 0 VonBert_K_Fem_GP_1
+5  0.05 0.2 0.063 0.1 0.8 0 -3 0 0 0 0 0 0 0 CV_young_Fem_GP_1
+6  0.05 0.2 0.085 0.1 0.8 0 -3 0 0 0 0 0 0 0 CV_old_Fem_GP_1
+7  0.15 0.25 0.17 0.19 0.5 0 -3 0 0 0 0 0 0 0 Wtlen_1_Fem_GP_1
+8  0.22 0.32 0.25 0.28 0.5 0 -3 0 0 0 0 0 0 0 Wtlen_2_Fem_GP_1
+9  33 40 35 37 0.8 0 -3 0 0 0 0 0 0 0 Mat50%_Fem_GP_1
+10  -47 -45 -46.9 -46.9 0.8 0 -3 0 0 0 0 0 0 0 Mat_slope_Fem_GP_1
+11  -3 3 1 1 0.8 0 -3 0 0 0 0 0 0 0 Eggs_scalar_Fem_GP_1
+12  -3 3 0 0 0.8 0 -3 0 0 0 0 0 0 0 Eggs_exp_len_Fem_GP_1
+13  0 0 0 0 0 0 -4 0 0 0 0 0 0 0 RecrDist_GP_1
+14  0 0 0 0 0 0 -4 0 0 0 0 0 0 0 RecrDist_Area_1
+15  0 0 0 0 0 0 -4 0 0 0 0 0 0 0 RecrDist_month_1
+16  1 1 1 1 1 0 -1 0 0 0 0 0 0 0 CohortGrowDev
+17  0.01 0.99 0.5 0.5 0 0 -4 0 0 0 0 0 0 0 FracFemale_GP_1
+mgparm_type for each parm: 1=M; 2=growth; 3=wtlen,mat,fec,hermo,sexratio; 4=recr; 5=migr; 6=ageerror; 7=catchmult 
+ 1 2 2 2 2 2 3 3 3 3 3 3 4 4 4 2 3
+Now read env, block/trend, and dev adjustments to MGparms 
+MG_active  1 1 0 0 0 0 0 0
+timevary_MG 
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0
+4 #_SR_function: 1=NA; 2=Ricker(2 parms); 3=BevHolt(2); 4=SCAA(2); 5=Hockey(3); 6=B-H_flattop(2); 7=Survival(3); 8=Shepherd(3); 9=Ricker_Power(3) 
+0  # 0/1 to use steepness in initial equ recruitment calculation
+0  #  future feature:  0/1 to make realized sigmaR a function of SR curvature
+ SR parms 
+ 8 12 12 10.5 10 0 1 0 0 0 0 0 0 0
+ 0 0 0 0 0.05 0 -4 0 0 0 0 0 0 0
+ 0 2 0.3 0.3 0.8 0 -4 0 0 0 0 0 0 0
+ -5 5 0 0 1 0 -4 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 -99 0 0 0 0 0 0 0
+ Do recruitment_autocorr: 0
+SR_Npar and N_SRparm2 and N_SRparm3:  2 5 5
+SR_parm_RD:  12 0 0.3 0 0
+2 do_recdev
+1995 recdev_start
+2018 recdev_end
+2 recdev_PH
+0 recdev_adv
+# advanced options not read;  defaults displayed below
+0 #_recdev_early_start (0=none; neg value makes relative to recdev_start)
+-4 #_recdev_early_phase
+0 #_forecast_recruitment phase (incl. late recr) (0 value resets to maxphase+1)
+1 #_lambda for Fcast_recr_like occurring before endyr+1
+992 #_last_early_yr_nobias_adj_in_MPD
+1980 #_first_yr_fullbias_adj_in_MPD
+2018 #_last_yr_fullbias_adj_in_MPD
+2018 #_first_recent_yr_nobias_adj_in_MPD
+1 #_max_bias_adj_in_MPD
+ #_NOTE: biasadjustment forced to 0.0 after year recdev_end
+0 # period of cycle in recruitment 
+-5 #min rec_dev
+5 #max rec_dev
+0 #_read_recdevs
+#_end of advanced SR options
+#_recruitment bias adjustment
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0
+0.3 F ballpark is annual F for fleet 1 for specified year
+2013 F_ballpark_yr (<0 to ignore)  
+3 F_Method 
+3 max_harvest_rate 
+3 N iterations for tuning hybrid F 
+ detailed F_setups 
+
+ ready to read init_F setup for: 0 fleet x season with initial equilibrium catch
+ initial equil F parameter setup
+
+# read Q setup only for fleets with survey/CPUE/effort observations, end with fleet_ID<0 #  fleet_ID link_type link_info  extra_se(0/1)   biasadj(0/1)  float(0/1)
+q setup 
+ 1 0 0 0 0
+ 1 0 0 0 0
+q setup 
+ 1 0 0 0 0
+ 1 0 0 0 0
+q setup parms 
+ 1 0 0 0 0
+ 2 0 0 0 0
+fleet 1 base index 1
+fleet 2 base index 2
+Q_Npar and Q_Npar2:  2 2
+Q_parm_RD:  -10.4929 0.893645
+ selex types 
+ 0 0 0 0
+ 0 0 0 0
+ 12 0 0 0
+ 12 0 0 0
+#Now count parameters for variance of composition data; CANNOT be time-varying
+ selex and composition base parameters 
+1 ##  0.01 5 3.07633 0.2 99 0 2 0 0 0 0 0.5 0 0 ## AgeSel_P1_FISHERY1(1)
+2 ##  0.01 5 3.54659 1.8 99 0 2 0 0 0 0 0.5 0 0 ## AgeSel_P2_FISHERY1(1)
+3 ##  0.01 5 1.47274 0.2 99 0 2 0 0 0 0 0.5 0 0 ## AgeSel_P1_SURVEY1(2)
+4 ##  0.01 5 0.11742 1.5 99 0 2 0 0 0 0 0.5 0 0 ## AgeSel_P2_SURVEY1(2)
+ now read 0/1 for 2D_AR
+0  #_ 0/1 to request experimental 2D_AR selectivity smoother options  
+N_selparm: 4 with timevary: 4 with TV and 2D_AR: 4 timevary parm range for sel: 0 0 0
+0 TG_custom (need to read even if no tag data )
+ read var_adjust list until -9999
+ -9999 1 0
+ number of variance adjustment records = 0
+1 max_lambda_phase 
+0 sd_offset (adds log(s)); needed if variance parameters are estimated 
+ read lambda changes list until -9999
+ number of lambda change records = 0
+0 N lambda changes 
+0 # read specs for more stddev reporting 
+ # placeholder vector with selex type, len/age, year, N selex bins, Growth pattern, N growth ages
+999  If you see 999, we got to the end of the control file successfully! 
+N parameters: 71
+Parameters plus derived quant: 293
+Adjust the phases 
+ requested turn_off phase: 10
+ParCount 71   Active parameters: 41
+Turn_off_phase 10
+ max_phase 3
+293
+parm 71 covar 41
+parm 109 covar 79
+parm 147 covar 117
+parm 183 covar 153
+parm 219 covar 189
+parm 254 covar 224
+parm 270 covar 240
+Active parameters plus derived quantities:  263
+ N_WTage_rd 0
+now in PARAMETER_SECTION 
+ now dimension the selectivity arrays 4
+ 0.01 0.01 0.01 0.01
+ 5 5 5 5
+ 2 2 2 2
+ OK after dimension the selectivity arrays 
+ check 0 
+ OK after dimension the 2dar arrays 
+end of parameter section
+ do variance adjustment for surveys 
+ survey stderr has been set-up 
+ discard stderr has been set-up 
+ mean bodywt stderr has been set-up 
+ length comp var adjust has been set-up 
+ age comp var adjust has been set-up 
+ setup stderr for mean size-at-age: 
+ set parms to init values in CTL file 
+ MGparms read from ctl  0.1 30 37 0.28 0.063 0.085 0.17 0.25 35 -46.9 1 0 0 0 0 1 0.5
+ SRR_parms read from ctl  12 0 0.3 0 0
+ rec_devs read from ctl  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ Q_parms read from ctl  -10.4929 0.893645
+ selex_parms read from ctl  3.07633 3.54659 1.47274 0.11742
+
+ now check MGparm bounds and priors and do jitter if requested 
+ MG_parms after check  0.1 30 37 0.28 0.063 0.085 0.17 0.25 35 -46.9 1 0 0 0 0 1 0.5
+
+ now check SR_parm bounds and priors and do jitter if requested 
+ SRR_parms after check  12 0 0.3 0 0
+
+ now check recdev bounds and priors and do jitter if requested 
+ rec_devs after check  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+ now check Qparm bounds and priors and do jitter if requested 
+ Q_parms after check  -10.4929 0.893645
+
+ now check sel_parm bounds and priors and do jitter if requested 
+ selex_parms after check   3.07633 3.54659 1.47274 0.11742
+ ready to evaluate once 
+
+**********************
+number of parameters with timevary:  0
+ did MG setup
+ did growth1
+1992 initial yr do CV setup for gp, g: 1 1
+1992 seas: 1 growth gp,g: 1 1 settle_age 0 Lmin: 30 Linf: 37
+ K@age:  0.28 0.28 0.28 0.28 0.28 0.28 0.28 0.28 0.28 0.28 0.28 0.28 0.28
+ L@A(w/o lin):  24.7453 27.7381 30 31.7095 33.0015 33.978 34.716 35.2738 35.6954 36.014 36.2548 36.4368 36.5743
+ L_inf 37 size@exactly maxage 36.5743
+ adjusted size at maxage 36.8929  using decay of: 0.055
+ final_val 36.8929
+1992 seas: 1 sex: 1 gp: 1 settle: 1 Lmin: 30 Linf: 37 VBK: -0.28
+ size@t+1    0 0 0 31.7095 33.0015 33.978 34.716 36.8929
+ did growth2 in prelim calcs
+ 24.7453 27.7381 30 31.7095 33.0015 33.978 34.716 35.2738 35.6954 36.014 36.2548 36.4368 36.8929
+ready to do natmort 
+Natmort seas:1 sex:1 Gpat:1 sex*Gpat:1 settlement:1 gpi:1 M:  0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1
+ did natmort 
+wtlen2 
+ 0.266064 0.285905 0.302307 0.316406 0.328837 0.34 0.35016 0.359506 0.368175 0.376272 0.383877 0.391056 0.397859 0.40433 0.410505 0.416413 0.42208 0.427527 0.432774 0.437837 0.442729 0.447465 0.452055
+wtlen2^2  0.0707903 0.0817415 0.0913898 0.100113 0.108134 0.1156 0.122612 0.129245 0.135553 0.141581 0.147362 0.152924 0.158292 0.163483 0.168515 0.1734 0.178152 0.18278 0.187293 0.191701 0.196009 0.200225 0.204354
+wtlen2:firstdiff  0.0223087 0.0179306 0.0151486 0.0132037 0.0117573 0.0106341 0.00973326 0.00899258 0.00837141 0.00784198 0.00738464 0.00698508 0.0066326 0.00631901 0.00603798 0.00578449 0.00555453 0.00534482 0.00515271 0.00497598 0.00481277 0.00466154
+process maturity fecundity using option: 2
+gp: 1 matlen:  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+gp: 1 matage:  4.37964e-27 4.37968e-27 4.37973e-27 4.37977e-27 4.37983e-27 4.37988e-27 4.37994e-27 4.38e-27 4.38007e-27 4.38014e-27 4.38022e-27 4.38031e-27 4.3804e-27
+mat_fec_len 
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ spawn 
+ fecundity ok 
+do recrdist: 
+recruitment distribution in year: 1992  DIST: 
+ 1
+ made the age_age' key 
+
+**********************
+number of parameters with timevary:  0
+Natmort seas:1 sex:1 Gpat:1 sex*Gpat:1 settlement:1 gpi:1 M:  0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1
+yr 1992, seas: 1, fleet:1
+ sampled  size  11743.9 1.27671e-06 4.17286e-05 0.498709 259.835 6987.04 13110.4 1919.26 28.8878 337.25 4405.3 26212.2 81381.8 163471 241969 265835 211882 120237 47894 13250.7 2526.19 329.849 31.2039
+ sampled  age   11743.9 22293.5 38692.5 58376.3 74496.2 82092.8 82076.3 77826.5 71923.7 65690.7 59683.8 54101.2 514815
+yr 1993, seas: 1, fleet:1
+ sampled  size  11743.9 1.27671e-06 4.12208e-05 0.492641 256.673 6902.02 12950.9 1895.88 27.6403 314.335 4119.33 24287.8 73862.1 144565 209620 227428 180047 101822 40491 11193.4 2133.12 278.469 26.3405
+ sampled  age   11743.9 22022.2 37711.4 55570 68621.2 73112.2 71275.5 66591.5 61082.6 55594.8 50432 45683.1 434526
+yr 1993, seas: 1, fleet:2
+ sampled  size  2.98573e-16 1.26566e-13 3.56675e-11 5.51824e-09 6.8589e-07 6.34189e-05 0.00486886 0.28716 12.979 366.188 5031.26 31890.8 98969.2 175677 219822 216608 164068 91003.4 35859.7 9865.39 1874.81 244.37 23.1033
+ sampled  age   1.39228e-11 0.957919 118374 102241 87438.1 75159.4 65630.3 58207.5 52149 46970.7 42413.8 38342.9 364388
+yr 1994, seas: 1, fleet:1
+ sampled  size  11743.9 1.27671e-06 4.1122e-05 0.491459 256.058 6885.47 12919.8 1891.31 26.6742 294.965 3881.63 22662.2 67276.4 127357 179242 190553 149040 83731 33182 9156.7 1743.41 227.487 21.5126
+ sampled  age   11743.9 21969.4 37065.3 53640.2 64278.6 65833.7 61746.1 56087.4 50616.9 45695.1 41294.6 37342.4 354780
+yr 1995, seas: 1, fleet:1
+ sampled  size  11743.9 1.27671e-06 4.09621e-05 0.489548 255.062 6858.69 12869.6 1883.92 25.7416 277.419 3668.38 21179.1 61108.8 110902 149768 154369 118343 65707 25869.6 7113.7 1351.87 176.22 16.655
+ sampled  age   11743.9 21884 36675.5 51901.2 60445.4 59435.3 53157.8 46236.7 40472.6 35907.5 32169.8 28974.4 274484
+yr 1995, seas: 1, fleet:2
+ sampled  size  1.72905e-16 7.768e-14 2.27866e-11 3.21997e-09 4.04524e-07 3.95124e-05 0.00342153 0.22288 10.8649 319.478 4437.1 27813.1 83161.3 137171 155489 140727 101045 54417.4 21112.1 5761.25 1090.21 141.78 13.3872
+ sampled  age   1.38348e-11 0.93932 112221 91511.1 72532.5 56791.6 45148.7 37134.6 31691.1 27801.7 24784.9 22274.8 210817
+yr 1996, seas: 1, fleet:1
+ sampled  size  11743.9 1.27671e-06 4.06772e-05 0.486143 253.288 6810.99 12780.1 1870.79 24.6961 257.907 3428.88 19545.7 54519.3 93732.4 119456 117462 87161.9 47423.6 18452.1 5040.37 954.319 124.141 11.7189
+ sampled  age   11743.9 21731.8 36001.8 49933 55809.9 52318.6 44282.2 36420.4 30397.1 26105.8 22964.8 20497.3 192848
+yr 1997, seas: 1, fleet:1
+ sampled  size  11743.9 1.27671e-06 4.01563e-05 0.479919 250.045 6723.78 12616.4 1846.81 23.4032 233.425 3120.72 17496.5 46703.3 74561 87224.7 79565.6 55871.2 29332 11171.1 3013.97 566.64 73.4144 6.91376
+ sampled  age   11743.9 21453.5 34797.8 46538.7 49245.6 42760.3 33600 25747.5 20160.5 16448.4 13983.4 12245.9 113420
+yr 1997, seas: 1, fleet:2
+ sampled  size  6.0681e-17 3.3953e-14 1.12455e-11 1.16356e-09 1.51707e-07 1.77094e-05 0.00204394 0.156809 8.45258 261.436 3675.46 22701.3 64615.2 95790.4 91452 68925 43122.3 21307.2 7866.83 2088.07 389.045 50.1525 4.71085
+ sampled  age   1.36683e-11 0.897748 101412 75653.4 52696 35536.9 24460 17593.6 13384.6 10781.2 9114.04 7961.96 73663.1
+yr 1998, seas: 1, fleet:1
+ sampled  size  11743.9 1.27671e-06 3.98416e-05 0.476157 248.085 6671.08 12517.5 1832.31 22.4588 214.344 2877.72 15890 40697.8 60245.3 63854.3 52762.6 34143.8 16924.1 6216 1641.24 304.696 39.1882 3.67414
+ sampled  age   11743.9 21285.4 33789.8 43580.2 43537.6 35023.4 25080.7 17673.6 12831.8 9799.7 7906.49 6688.57 59909.5
+yr 1999, seas: 1, fleet:1
+ sampled  size  11743.9 1.2767e-06 3.93187e-05 0.469908 244.829 6583.53 12353.3 1808.25 21.5377 196.358 2643.05 14371.2 35330.6 48380.1 45911.4 33495.4 19284.5 8723.6 3012.11 765.538 138.945 17.6347 1.64003
+ sampled  age   11743.9 21006 32608.6 40126.9 37311.7 27325.2 17641.5 11149.8 7384.4 5209.57 3927.73 3151 26441.6
+yr 1999, seas: 1, fleet:2
+ sampled  size  7.30191e-18 1.26479e-14 5.49003e-12 1.60479e-10 2.44089e-08 5.66673e-06 0.0011003 0.0966347 5.56538 179.47 2544.37 15404.7 41307.1 53571.3 39867.2 21407.4 9632.73 3703.69 1163.53 280.943 49.6049 6.20152 0.571861
+ sampled  age   1.30144e-11 0.793117 78019.1 46946.9 25107 12907.8 6879.44 3960.85 2513.37 1739.62 1300.61 1039.57 8709.54
+yr 2000, seas: 1, fleet:1
+ sampled  size  11743.9 1.27669e-06 3.66304e-05 0.43778 228.09 6133.4 11508.7 1684.59 18.9581 151.126 2032.95 10694.2 24222.2 28460.8 21771.7 12420.3 5596.11 2060.88 616.109 143.371 24.7447 3.05326 0.279311
+ sampled  age   11743.9 19569.8 27737.5 29121.2 21360.5 11980.5 6084.99 3182.58 1810.47 1141.84 788.07 588.438 4406.02
+yr 2000, seas: 1, fleet:2
+ sampled  size  6.31024e-19 9.53519e-15 4.54389e-12 2.34188e-11 4.76165e-09 2.95431e-06 0.000728986 0.0624913 3.5214 115.007 1633.21 9729.5 24976.7 29400.7 18026.4 7088.81 2183.55 584.099 139.58 28.5118 4.59655 0.547709 0.0491741
+ sampled  age   1.23765e-11 0.664943 54211.9 24317.2 8932.9 3170.95 1251.12 578.09 310.605 190.958 130.321 96.8299 723.47
+yr 2001, seas: 1, fleet:1
+ sampled  size  11743.9 1.27668e-06 3.36064e-05 0.401638 209.26 5627.05 10558.5 1545.5 16.4075 106.759 1429.72 7261.44 15093.8 14969 8821.81 3614.24 1097.78 265.73 55.1257 9.97119 1.48958 0.170403 0.0149712
+ sampled  age   11743.9 17954.2 21567.6 17512.9 8695.58 3034.76 988.329 366.413 163.653 86.5043 52.7878 35.9065 225.489
+yr 2001, seas: 1, fleet:2
+ sampled  size  4.57895e-20 9.29995e-15 4.47754e-12 9.59241e-12 2.22737e-09 2.34747e-06 0.00060495 0.0488156 2.61957 85.4931 1213.73 7161.73 17933.6 19964.7 10872.8 3434.85 759.065 130.741 19.0784 2.56063 0.315416 0.0325932 0.00272088
+ sampled  age   1.23765e-11 0.610048 42153.2 14623.9 3636.46 803.225 203.208 66.5559 28.0764 14.4668 8.72936 5.90856 37.0253
+yr 2002, seas: 1, fleet:1
+ sampled  size  11743.9 1.27668e-06 3.36064e-05 0.401638 209.26 5627.05 10558.5 1545.5 16.0319 94.0032 1255.27 6275.18 12549.2 11491.9 5939.91 2036.37 484.263 82.997 10.9603 1.22375 0.124548 0.0113036 0.000879608
+ sampled  age   11743.9 17954.2 19787.1 13617.4 5229.35 1235.41 250.351 59.5131 18.8415 7.81934 3.99915 2.40514 11.8021
+yr 2003, seas: 1, fleet:1
+ sampled  size  11743.9 1.27668e-06 3.36064e-05 0.401638 209.26 5627.05 10558.5 1545.5 15.9769 92.3291 1231.18 6111.1 12009.5 10598.9 5144.83 1620.56 344.569 50.3844 5.22443 0.400476 0.0244824 0.0013226 7.00441e-05
+ sampled  age   11743.9 17954.2 19787.1 12493.2 4066.15 742.951 101.915 15.0751 3.06025 0.900246 0.361493 0.182211 0.641531
+yr 2004, seas: 1, fleet:1
+ sampled  size  11743.9 1.27668e-06 3.36064e-05 0.401638 209.26 5627.05 10558.5 1545.5 15.9703 92.1523 1228.69 6092.8 11938.5 10451.9 4979.96 1517.4 306.937 41.8742 3.93992 0.26029 0.0124335 0.000448512 1.35218e-05
+ sampled  age   11743.9 17954.2 19787.1 12493.2 3730.47 577.692 61.2894 6.13687 0.775183 0.146219 0.0416189 0.0164705 0.0372022
+yr 2004, seas: 1, fleet:2
+ sampled  size  1.25974e-20 9.28585e-15 4.47301e-12 8.31948e-12 1.85827e-09 2.23826e-06 0.000578661 0.0449297 2.33359 76.0662 1079.3 6326.21 15575.4 16695.4 8378.82 2260.77 388.38 46.1513 3.8339 0.22655 0.00967348 0.000304262 7.46975e-06
+ sampled  age   1.23765e-11 0.610048 38673.2 10432.2 1560.07 152.901 12.6016 1.11471 0.132991 0.0244533 0.0068824 0.0027103 0.00610862
+yr 2005, seas: 1, fleet:1
+ sampled  size  11743.9 1.27668e-06 3.36064e-05 0.401638 209.26 5627.05 10558.5 1545.5 15.9697 92.1392 1228.52 6091.47 11932.8 10438.1 4960.93 1502.27 299.931 39.949 3.61623 0.225427 0.00987112 0.000309363 7.21802e-06
+ sampled  age   11743.9 17954.2 19787.1 12493.2 3730.47 530 47.6564 3.69059 0.315567 0.0370383 0.00675978 0.00189626 0.00242464
+yr 2005, seas: 1, fleet:2
+ sampled  size  1.27005e-20 9.37132e-15 4.51418e-12 8.41225e-12 1.9068e-09 2.28985e-06 0.000592924 0.0463593 2.42425 79.0978 1122.44 6582.21 16224.3 17433 8789.97 2388.96 413.187 49.1532 4.04733 0.233579 0.0095449 0.000278891 6.00876e-06
+ sampled  age   1.24904e-11 0.621888 40125.7 11093.7 1701.37 155.901 11.0111 0.757554 0.06134 0.00702635 0.00126868 0.000354223 0.000451995
+yr 2006, seas: 1, fleet:1
+ sampled  size  11743.9 1.27669e-06 3.41384e-05 0.407997 212.572 5716.13 10725.7 1569.97 16.283 95.7343 1277.04 6345.01 12489.4 11029.9 5318.59 1635.86 331.355 44.6623 4.0679 0.252825 0.010887 0.000328969 7.16378e-06
+ sampled  age   11743.9 18238.4 20450 13308.3 4145.08 614.932 52.3982 3.50508 0.23403 0.0186772 0.00212534 0.000382626 0.000242713
+yr 2006, seas: 1, fleet:2
+ sampled  size  1.27432e-20 9.39717e-15 4.52666e-12 8.47622e-12 1.97224e-09 2.35272e-06 0.000610273 0.048155 2.53995 82.9618 1177.44 6910.21 17065.9 18413.5 9362.39 2581.33 454.652 55.0666 4.6086 0.269153 0.0110386 0.00031965 6.69251e-06
+ sampled  age   1.25248e-11 0.635392 41931.9 12037.9 1940.37 186.716 12.5388 0.746403 0.0472305 0.00367996 0.00041435 7.42508e-05 4.70046e-05
+yr 2007, seas: 1, fleet:1
+ sampled  size  11743.9 1.27669e-06 3.42999e-05 0.409927 213.578 5743.18 10776.4 1577.39 16.431 98.7062 1317.23 6557.27 12966.1 11556.5 5653.04 1767.94 364.489 50.0391 4.63978 0.293116 0.0127799 0.000388138 8.39489e-06
+ sampled  age   11743.9 18324.7 20980.4 14017.9 4557.62 714.49 64.1938 4.09259 0.236717 0.0147718 0.00114365 0.000128407 3.75175e-05
+yr 2007, seas: 1, fleet:2
+ sampled  size  1.28993e-20 9.4966e-15 4.5746e-12 8.63378e-12 2.07005e-09 2.44077e-06 0.000635172 0.050948 2.72838 89.2918 1267.57 7448.2 18449 20032.2 10315.4 2906.14 526.082 65.5409 5.6434 0.338766 0.0142439 0.000421132 8.93796e-06
+ sampled  age   1.26573e-11 0.652645 44880 13607.2 2356.82 244.91 17.5637 1.00287 0.0551386 0.00336375 0.00025784 2.88236e-05 8.40551e-06
+yr 2008, seas: 1, fleet:1
+ sampled  size  11743.9 1.27669e-06 3.49241e-05 0.417387 217.465 5847.7 10972.6 1606.1 16.8336 104.104 1390.49 6950.16 13874.3 12598.9 6337.44 2043.99 434.888 61.6774 5.90824 0.385594 0.0173469 0.000542091 1.20166e-05
+ sampled  age   11743.9 18658.2 21892.6 15464.1 5418.18 931.799 91.8189 6.30839 0.351605 0.0191051 0.00115924 8.86456e-05 1.27836e-05
+yr 2008, seas: 1, fleet:2
+ sampled  size  1.29346e-20 9.49911e-15 4.57586e-12 8.71552e-12 2.15479e-09 2.50856e-06 0.000653826 0.0530171 2.86557 93.8549 1332.58 7840.61 19484.5 21304.3 11123.9 3208.24 598.333 76.9247 6.84582 0.425061 0.0184835 0.000564723 1.2361e-05
+ sampled  age   1.26605e-11 0.664883 46879.9 15037 2808.69 320.351 25.2048 1.55119 0.0821886 0.004366 0.00026229 1.99696e-05 2.87432e-06
+yr 2009, seas: 1, fleet:1
+ sampled  size  11743.9 1.27669e-06 3.49396e-05 0.417572 217.561 5850.29 10977.4 1606.81 16.9143 106.711 1425.97 7143.56 14338.3 13166.5 6743.19 2223.77 485.161 70.7149 6.97224 0.469132 0.0217808 0.00070258 1.60753e-05
+ sampled  age   11743.9 18666.5 22311.7 16165.2 5994.94 1112.39 120.358 9.07417 0.545184 0.0285494 0.00150847 9.04056e-05 7.86472e-06
+yr 2009, seas: 1, fleet:2
+ sampled  size  1.30436e-20 9.54978e-15 4.60032e-12 8.84005e-12 2.22778e-09 2.56061e-06 0.00066861 0.0548524 2.99477 98.1916 1394.37 8212.7 20462.1 22498.6 11881.7 3494.95 669.161 88.6066 8.14203 0.522717 0.0235217 0.00074417 1.68716e-05
+ sampled  age   1.2728e-11 0.672633 48809.9 16289.2 3267.91 406.586 35.3515 2.39521 0.137008 0.00701899 0.000367297 2.19199e-05 1.90337e-06
+yr 2010, seas: 1, fleet:1
+ sampled  size  11743.9 1.27669e-06 3.52592e-05 0.421392 219.552 5903.81 11077.8 1621.52 17.1274 109.664 1466.34 7367.4 14889.7 13858 7242.27 2444.5 547.095 82.0345 8.34062 0.579925 0.0278559 0.000930213 2.20552e-05
+ sampled  age   11743.9 18837.2 22752.2 17089.7 6661.63 1341.59 159.586 13.3573 0.885555 0.0501181 0.00255506 0.000133413 8.6445e-06
+yr 2010, seas: 1, fleet:2
+ sampled  size  1.30571e-20 9.53019e-15 4.59092e-12 8.88198e-12 2.26952e-09 2.58513e-06 0.00067492 0.0555602 3.04074 99.6863 1415.69 8345.04 20833.6 23006 12255 3658.14 714.144 96.7013 9.11775 0.602538 0.0279805 0.000915202 2.14819e-05
+ sampled  age   1.27018e-11 0.675859 49362.5 16984.3 3561.21 478.853 45.6598 3.43016 0.216383 0.0119774 0.000604673 3.14382e-05 2.03323e-06
+yr 2011, seas: 1, fleet:1
+ sampled  size  11743.9 1.27669e-06 3.51349e-05 0.419906 218.778 5882.99 11038.8 1615.8 17.0885 110.017 1471.2 7396.64 14974.5 13992.1 7366.55 2513.45 570.372 86.9568 9.01466 0.641221 0.031609 0.00108615 2.6567e-05
+ sampled  age   11743.9 18770.8 22790.8 17181.1 6877.66 1441.78 184.79 16.9319 1.24353 0.0775817 0.00427263 0.000215215 1.19007e-05
+yr 2011, seas: 1, fleet:2
+ sampled  size  1.32947e-20 9.65645e-15 4.65181e-12 9.1038e-12 2.38362e-09 2.67518e-06 0.000699687 0.0583145 3.22455 105.822 1503.05 8869.76 22203.7 24661.8 13289.9 4044.66 809.415 112.585 10.9216 0.743384 0.0356023 0.00120291 2.92193e-05
+ sampled  age   1.28699e-11 0.692316 52133.7 18650.4 4163.97 598.834 62.51 5.18227 0.363506 0.022218 0.0012126 6.08381e-05 3.35835e-06
+yr 2012, seas: 1, fleet:1
+ sampled  size  11743.9 1.27669e-06 3.5936e-05 0.429481 223.766 6017.13 11290.5 1652.64 17.5858 116.218 1555.47 7852.78 16052.1 15279.4 8263.9 2904.74 679.988 107.114 11.4842 0.845493 0.0431502 0.00153558 3.89453e-05
+ sampled  age   11743.9 19198.8 23810.5 18844.7 8043.69 1842.53 257.513 26.126 2.12964 0.148133 0.00901916 0.000491391 2.59941e-05
+yr 2012, seas: 1, fleet:2
+ sampled  size  1.37124e-20 9.8272e-15 4.73426e-12 9.55794e-12 2.68078e-09 2.90491e-06 0.000761653 0.0649705 3.65786 120.189 1707.65 10104.8 25466 28686.9 15882.3 5043.24 1060.94 155.133 15.8149 1.12977 0.0566859 0.00200282 5.08087e-05
+ sampled  age   1.30971e-11 0.734579 58439.4 23004.7 5746.91 936.273 108.854 10.0995 0.790201 0.0539695 0.00325963 0.00017697 9.34713e-06
+yr 2013, seas: 1, fleet:1
+ sampled  size  11743.9 1.2767e-06 3.70303e-05 0.442559 230.58 6200.36 11634.3 1702.97 18.3956 129.222 1732.18 8812.6 18342.6 18075.3 10281.5 3821.95 947.746 158.2 17.9574 1.39821 0.075311 0.00282118 7.51765e-05
+ sampled  age   11743.9 19783.4 25935.2 22213.7 10789.6 2862.26 465.001 53.3445 4.90369 0.381823 0.0260189 0.00156987 8.96892e-05
+yr 2013, seas: 1, fleet:2
+ sampled  size  1.42665e-20 9.91404e-15 4.77647e-12 1.01806e-11 3.08159e-09 3.15683e-06 0.000829045 0.0728403 4.19075 137.859 1959.33 11634.3 29573 33920.6 19442.3 6519.94 1464.47 229.138 24.9988 1.90739 0.101938 0.00382382 0.00010268
+ sampled  age   1.3212e-11 0.770944 65931.2 28753.9 8372.91 1608.46 219.684 23.1704 2.04952 0.156871 0.0106093 0.00063801 3.63979e-05
+yr 2014, seas: 1, fleet:1
+ sampled  size  11743.9 1.2767e-06 3.75889e-05 0.449234 234.058 6293.89 11809.8 1728.66 18.9573 140.784 1890.38 9703.44 20617.5 21115.5 12682.3 5006.81 1322.9 235.921 28.641 2.38445 0.137067 0.00546537 0.000154685
+ sampled  age   11743.9 20081.9 27577.7 25698.5 14062.5 4423.73 858.39 116.559 12.2268 1.07821 0.0824053 0.00556943 0.00035392
+yr 2014, seas: 1, fleet:2
+ sampled  size  1.65861e-20 1.03078e-14 4.96737e-12 1.22703e-11 4.18457e-09 3.76481e-06 0.000985342 0.0908953 5.39655 177.498 2523.91 15095.4 39057.6 46462.8 28459.5 10511.3 2628.1 456.781 55.1678 4.63514 0.271119 0.0110556 0.000320893
+ sampled  age   1.37335e-11 0.84878 81924.1 43130.8 15740.8 3883.68 663.923 84.8677 8.66131 0.754534 0.057359 0.00386757 0.00024552
+yr 2015, seas: 1, fleet:1
+ sampled  size  11743.9 1.27671e-06 4.01679e-05 0.480057 250.117 6725.72 12620.1 1847.28 20.9998 174.843 2356.93 12369.7 27649.5 31009.6 21019.4 9422.13 2824.33 569.678 77.848 7.25318 0.463236 0.0203617 0.00063114
+ sampled  age   11743.9 21459.7 32175.3 35690.4 25393.8 10803.8 2850.45 500.938 64.7697 6.64215 0.579833 0.0441179 0.0031648
+yr 2015, seas: 1, fleet:2
+ sampled  size  2.40971e-20 1.03721e-14 5.00178e-12 1.70347e-11 6.37508e-09 4.61745e-06 0.00117718 0.112491 6.79107 222.218 3159.97 19085 50595.9 63253.2 42312.9 17686.3 5067.28 1008.13 138.749 13.1946 0.866848 0.0393635 0.00126337
+ sampled  age   1.38072e-11 0.917257 97662.9 62090.7 29901.2 10088.3 2360.18 391.741 49.3542 5.00335 0.434568 0.032992 0.00236439
+yr 2016, seas: 1, fleet:1
+ sampled  size  11743.9 1.27671e-06 4.05381e-05 0.484482 252.422 6787.71 12736.4 1864.31 21.9802 201.506 2723.45 14576.5 34099.6 41470.2 31327.5 15811.3 5359.56 1223.71 188.985 19.8266 1.41835 0.0693978 0.00238256
+ sampled  age   11743.9 21657.5 35051.1 43206.6 37506.5 21278.8 7737.91 1869.62 314.618 39.8728 4.05253 0.352376 0.0286828
+yr 2016, seas: 1, fleet:2
+ sampled  size  4.83036e-20 1.04278e-14 5.03501e-12 2.65201e-11 9.71582e-09 5.47879e-06 0.00133114 0.129554 7.86614 255.638 3633.18 22129.7 59961 78414.6 56805.3 26542.1 8621.21 1951.48 305.391 32.9046 2.43628 0.123876 0.00443021
+ sampled  age   1.38472e-11 0.931347 107638 76640.2 45389.7 20543.3 6647.46 1519.62 249.38 31.2547 3.1611 0.274276 0.0223048
+yr 2017, seas: 1, fleet:1
+ sampled  size  11743.9 1.27671e-06 4.07397e-05 0.48689 253.677 6821.46 12799.7 1873.59 22.5997 217.009 2938.16 16010.7 39033.2 50962.1 42227.9 23612.8 8932.67 2287.29 396.953 46.7716 3.74804 0.204596 0.00781654
+ sampled  age   11743.9 21765.2 35744.2 48017.2 46941.7 32939 16136.8 5406.21 1254.58 207.228 26.0453 2.63745 0.247582
+yr 2017, seas: 1, fleet:2
+ sampled  size  1.21475e-19 1.05627e-14 5.11018e-12 4.50669e-11 1.52026e-08 6.64338e-06 0.00150143 0.145042 8.71049 280.139 3976.97 24435.9 67725.7 92724.1 72604.1 37632.7 13709.2 3495.51 617.171 74.9558 6.23777 0.354971 0.0141725
+ sampled  age   1.39364e-11 0.948672 112639 88923.1 60366.8 34243 15043.9 4787.29 1085.39 177.44 22.2006 2.24368 0.210435
